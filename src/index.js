@@ -8,7 +8,15 @@ dotenv.config({
     path: './env'
 })
 
-connectDb();
+connectDb()
+.then(() => {
+    app.listen(process.env.PORT || 8000, () => {
+        console.log(`Server is running at port : ${process.env.PORT}`);
+    })
+})
+.catch((error) => {
+    console.log("Failed to connect to DataBase", error);
+})
 
 
 
@@ -29,7 +37,7 @@ connectDb();
 //         await mongoose.connect(`${proccess.env.MONGODB_URL}/${DB_NAME}`);
 //         app.on("error", (error)=>{
 //             console.log("ERRR: ", error);
-//             throwerror
+//             throw error
 //         })
 
 //         app.listen(process.env.PORT, () =>{
