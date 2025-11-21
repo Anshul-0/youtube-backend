@@ -1,0 +1,16 @@
+{
+  "name": "youtubebackend",
+  "version": "1.0.0",
+  "description": "This s developed by anshul",
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "Anshul Upadhyay",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
