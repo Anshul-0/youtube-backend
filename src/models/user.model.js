@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema(
     },
     watchHistory: [
       {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Video",
       },
     ],
@@ -98,4 +98,4 @@ userSchema.methods.generateRefreshToken = function () {
     );
 }; 
 
-const User = mongoose.model("User", userSchema);
+export const User = mongoose.model("User", userSchema);
