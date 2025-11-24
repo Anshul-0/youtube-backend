@@ -19,8 +19,9 @@ import fs from 'fs';
                 resource_type: "auto",
             })
             //file has been uploaded successfully
-            console.log("file has been upladed successfully", response.url);
-            return response.url;
+            // console.log("file has been upladed successfully", response.url);
+            fs.unlinkSync(localFilePath);
+            return response;
         } catch (error) {
             fs.unlinkSync(localFilePath); //remove he locally saved file temporary file as the upload has failed
             return null;
